@@ -2,7 +2,7 @@
     "name": "code-eol",
     "displayName": "code-eol 2022 (Line Endings)",
     "description": "Displays line endings like Atom/Notepad",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "icon": "icon.png",
     "publisher": "jeff-hykin",
     "repository": {
@@ -34,14 +34,14 @@
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "publish": "vsce package && vsce publish && rm *.vsix",
-        "build" : "parcel bulid index.js -t electron"
+        "build": "parcel bulid index.js -t electron"
     },
     "devDependencies": {
-        "vscode": "^1.1.5",
-        "@types/node": "7.0.4"
+        "@types/node": "7.0.4",
+        "vscode": "^1.1.5"
     },
     "dependencies": {
-        "tmp": "0.0.29",
+        "tmp": "^0.0.29",
         "vsce": "^1.40.0"
     },
     "contributes": {
@@ -50,14 +50,14 @@
                 "type": "object",
                 "title": "code-eol Configuration",
                 "properties": {
-                    "code-eol.toggleWithWhiteSpace" : {
+                    "code-eol.toggleWithWhiteSpace": {
                         "type": [
                             "boolean"
                         ],
                         "default": true,
                         "description": "If true, then showing/hiding whitespace in VS Code will also show/hide the line endings"
                     },
-                    "code-eol.validLineEnding" : {
+                    "code-eol.validLineEnding": {
                         "type": [
                             "string",
                             "null"
@@ -120,9 +120,11 @@
                 }
             }
         ],
-        "commands": [{
-            "command": "extension.toggleLineEndings",
-            "title": "Toggle (Show/Hide) Line Endings"
-        }]
+        "commands": [
+            {
+                "command": "extension.toggleLineEndings",
+                "title": "Toggle (Show/Hide) Line Endings"
+            }
+        ]
     }
 }
