@@ -2,7 +2,7 @@
     "name": "code-eol",
     "displayName": "code-eol (Line Endings)",
     "description": "Displays line endings like Atom/Notepad",
-    "version": "1.0.13",
+    "version": "1.1.0",
     "icon": "icon.png",
     "publisher": "jeff-hykin",
     "repository": {
