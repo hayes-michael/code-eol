@@ -1,8 +1,8 @@
 {
     "name": "code-eol",
-    "displayName": "code-eol 2022 (Line Endings)",
+    "displayName": "code-eol (Line Endings)",
     "description": "Displays line endings like Atom/Notepad",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "icon": "icon.png",
     "publisher": "jeff-hykin",
     "repository": {
@@ -32,17 +32,12 @@
         "onStartupFinished"
     ],
     "main": "./index.js",
-    "browser": "./dist/web/index.js",
+    "browser": "./index.js",
     "scripts": {
-        "build:web": "webpack --config webpack.config.js",
-        "watch:web": "webpack --config webpack.config.js --watch",
         "publish": "vsce package && vsce publish"
     },
     "devDependencies": {
-        "@types/node": "^18.0.0",
-        "@vscode/vsce": "^2.22.0",
-        "webpack": "^5.89.0",
-        "webpack-cli": "^5.1.4"
+        "@vscode/vsce": "^2.22.0"
     },
     "dependencies": {},
     "contributes": {

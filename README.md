@@ -91,3 +91,13 @@ Then post a bug/feature request!<br>
 (to do that just create an issue on github: https://github.com/jeff-hykin/code-eol)<br>
 The opacity setting, character-specific styles, and the toggle command were created because people on GitHub asked.<br>
 NOTE: It might take me awhile to repond on GitHub (I only maintain this in my free time), but I will respond.
+
+# Contributing / Debugging
+
+## Testing local extension
+To test the extension within local VSCode, simply go to the "Run / Debug" tab in VSCode and select `Run Extension (Desktop)` to open a test window for debugging the extension.
+
+## Testing web extension
+VSCode offers a web-based dev environment at [https://vscode.dev](https://vscode.dev). This extension is designed to also work natively within the web-based VSCode version.
+
+To test the extension in a test web environment, you can spin up a local test VSCode web server by running `npm install` and `npx -y @vscode/test-web --browser none --extensionDevelopmentPath=.` in the main project directory, then navigate to `localhost:3000` to debug in the browser-based version of VSCode.
