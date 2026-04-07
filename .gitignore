@@ -10,4 +10,5 @@ node_modules
 .vscode-test-web/
 
 # Ignore build output directories
-/dist
+dist/
+out/
