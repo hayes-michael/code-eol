@@ -10,8 +10,9 @@
     },
     "license": "MIT",
     "engines": {
-        "vscode": "^1.15.0"
+        "vscode": "^1.63.0"
     },
+    "extensionKind": ["ui", "web"],
     "keywords": [
         "code",
         "eol",
@@ -28,22 +29,22 @@
         "Other"
     ],
     "activationEvents": [
-        "*"
+        "onStartupFinished"
     ],
-    "main": "./dist/index",
+    "main": "./index.js",
+    "browser": "./dist/web/index.js",
     "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "publish": "vsce package && vsce publish && rm *.vsix",
-        "build": "parcel bulid index.js -t electron"
+        "build:web": "webpack --config webpack.config.js",
+        "watch:web": "webpack --config webpack.config.js --watch",
+        "publish": "vsce package && vsce publish"
     },
     "devDependencies": {
-        "@types/node": "7.0.4",
-        "vscode": "^1.1.5"
+        "@types/node": "^18.0.0",
+        "@vscode/vsce": "^2.22.0",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4"
     },
-    "dependencies": {
-        "tmp": "^0.0.29",
-        "vsce": "^1.40.0"
-    },
+    "dependencies": {},
     "contributes": {
         "configuration": [
             {

@@ -1,16 +1,22 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-            "name": "Launch Extension",
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Extension (Desktop)",
             "type": "extensionHost",
             "request": "launch",
-            "runtimeExecutable": "${execPath}",
-            "args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
-            "stopOnEntry": false,
-            "sourceMaps": true,
-            "outFiles": [ "${workspaceRoot}/out/**/*.js" ],
-            "preLaunchTask": "npm: watch"
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ]
+        },
+        {
+            "name": "Run Extension (Web / VS Code Online)",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionDevelopmentKind=web"
+            ]
         }
-	]
+    ]
 }
