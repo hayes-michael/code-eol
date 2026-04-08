@@ -1,11 +1,6 @@
 .vscode/**
-typings/**
-**/*.ts
-**/*.map
+.vscode-test-web/**
+.git/**
 .gitignore
-tsconfig.json
-vsc-extension-quickstart.md
-node_modules
-.cache
 node_modules/
-.cache/
+CONTRIBUTING.md

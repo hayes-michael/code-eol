@@ -1,8 +1,8 @@
 {
     "name": "code-eol",
-    "displayName": "code-eol 2022 (Line Endings)",
+    "displayName": "code-eol (Line Endings)",
     "description": "Displays line endings like Atom/Notepad",
-    "version": "1.0.12",
+    "version": "1.1.0",
     "icon": "icon.png",
     "publisher": "jeff-hykin",
     "repository": {
@@ -10,8 +10,9 @@
     },
     "license": "MIT",
     "engines": {
-        "vscode": "^1.15.0"
+        "vscode": "^1.63.0"
     },
+    "extensionKind": ["ui", "web"],
     "keywords": [
         "code",
         "eol",
@@ -28,22 +29,17 @@
         "Other"
     ],
     "activationEvents": [
-        "*"
+        "onStartupFinished"
     ],
-    "main": "./dist/index",
+    "main": "./index.js",
+    "browser": "./index.js",
     "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "publish": "vsce package && vsce publish && rm *.vsix",
-        "build": "parcel bulid index.js -t electron"
+        "publish": "vsce package && vsce publish"
     },
     "devDependencies": {
-        "@types/node": "7.0.4",
-        "vscode": "^1.1.5"
+        "@vscode/vsce": "^2.22.0"
     },
-    "dependencies": {
-        "tmp": "^0.0.29",
-        "vsce": "^1.40.0"
-    },
+    "dependencies": {},
     "contributes": {
         "configuration": [
             {
